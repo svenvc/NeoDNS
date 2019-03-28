@@ -66,6 +66,16 @@ NeoDNSClient >> clearCache [
 ]
 
 { #category : #initialization }
+NeoDNSClient >> clearProcessAndSocket [
+	| s p |
+	s := socket.
+	p := process.
+	process := socket := nil.	
+	s ifNotNil: [ [ s closeAndDestroy ] on: Exception do: [ ] ].
+	p ifNotNil: [ [ p terminate ] on: Exception do: [ ] ]
+]
+
+{ #category : #initialization }
 NeoDNSClient >> clearRequestQueue [
 	requestQueue removeAll
 ]
@@ -107,6 +117,11 @@ NeoDNSClient >> nextId [
 	^ idCounter := idCounter + 1 \\ 16rFFFF
 ]
 
+{ #category : #accessing }
+NeoDNSClient >> processName [
+	^ self class name asString , ' process'
+]
+
 { #category : #private }
 NeoDNSClient >> queueQuery: query [
 	| dnsRequest |
@@ -134,7 +149,8 @@ NeoDNSClient >> receiveResponse [
 { #category : #initialization }
 NeoDNSClient >> reset [
 	self clearCache.
-	self clearRequestQueue
+	self clearRequestQueue.
+	self clearProcessAndSocket
 ]
 
 { #category : #process }
@@ -155,14 +171,14 @@ NeoDNSClient >> sendOpenRequests [
 NeoDNSClient >> start [
 	socket := Socket newUDP.
 	process := [ 
-		[ [ requestQueue isEmpty ] whileFalse: [ self work ] ]
-			ensure: [
+		[ 
+			[ requestQueue isEmpty ] whileFalse: [ self work ].
+		] ensure: [
 				self cleanupExpiredRequests.
-				socket closeAndDestroy.
-				socket := process := nil ]
+				self clearProcessAndSocket ]
 	] 
 		forkAt: Processor lowIOPriority 
-		named: self class name asString , ' process'
+		named: self processName
 ]
 
 { #category : #process }

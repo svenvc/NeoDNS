@@ -60,6 +60,8 @@ NeoSimplifiedDNSClient class >> getSystemDNS [
 
 { #category : #private }
 NeoSimplifiedDNSClient >> addressByName: hostname [
+	"This is just an alias. It is used to resolce CNAME values"
+	
 	^ self addressForName: hostname
 ]
 
