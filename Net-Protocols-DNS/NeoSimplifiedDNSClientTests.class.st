@@ -25,7 +25,7 @@ NeoSimplifiedDNSClientTests >> testAddressForBogusName [
 NeoSimplifiedDNSClientTests >> testAddressForName [
 	| address |
 	address := self dnsClient addressForName: 'stfx.eu'.
-	self assert: address equals: #[46 137 113 215] asSocketAddress
+	self assert: address equals: #[146 185 177 20] asSocketAddress
 ]
 
 { #category : #tests }
@@ -33,7 +33,7 @@ NeoSimplifiedDNSClientTests >> testAddressForNameCNAME [
 	| address |
 	"Test a CNAME record that is an alias to another ANAME record"
 	address := self dnsClient addressForName: 'mc.stfx.eu'.
-	self assert: address equals: #[46 137 113 215] asSocketAddress
+	self assert: address equals: #[146 185 177 20] asSocketAddress
 ]
 
 { #category : #tests }
