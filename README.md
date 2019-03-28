@@ -1,4 +1,4 @@
-# NeoDSN
+# NeoDNS
 Experimental in-image DNS implementation for Pharo
 
 ## See Also
