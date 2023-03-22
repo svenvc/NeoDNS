@@ -11,7 +11,7 @@ Class {
 		'data',
 		'type'
 	],
-	#category : #'Net-Protocols-DNS-MessageFormat'
+	#category : #'Neo-DNS-Core-Messages'
 }
 
 { #category : #accessing }

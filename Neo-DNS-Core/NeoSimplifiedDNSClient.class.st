@@ -31,7 +31,7 @@ Class {
 	#classInstVars : [
 		'default'
 	],
-	#category : #'Net-Protocols-DNS-Experimental'
+	#category : #'Neo-DNS-Core-Clients'
 }
 
 { #category : #accessing }

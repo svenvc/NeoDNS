@@ -10,7 +10,7 @@ Class {
 	#instVars : [
 		'ns'
 	],
-	#category : #'Net-Protocols-DNS-MessageFormat'
+	#category : #'Neo-DNS-Core-Messages'
 }
 
 { #category : #accessing }

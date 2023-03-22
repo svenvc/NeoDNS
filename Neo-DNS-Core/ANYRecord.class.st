@@ -7,7 +7,7 @@ I represent a request for all records, *
 Class {
 	#name : #ANYRecord,
 	#superclass : #DNSRecord,
-	#category : #'Net-Protocols-DNS-MessageFormat'
+	#category : #'Neo-DNS-Core-Messages'
 }
 
 { #category : #accessing }

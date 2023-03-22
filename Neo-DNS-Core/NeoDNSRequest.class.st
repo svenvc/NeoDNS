@@ -16,7 +16,7 @@ Class {
 		'semaphore',
 		'sent'
 	],
-	#category : #'Net-Protocols-DNS-Experimental'
+	#category : #'Neo-DNS-Core-Clients'
 }
 
 { #category : #initialization }

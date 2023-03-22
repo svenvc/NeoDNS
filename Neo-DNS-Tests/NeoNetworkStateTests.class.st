@@ -4,7 +4,7 @@ Tests for NeoNetworkState
 Class {
 	#name : #NeoNetworkStateTests,
 	#superclass : #TestCase,
-	#category : #'Net-Protocols-DNS-Experimental'
+	#category : #'Neo-DNS-Tests'
 }
 
 { #category : #tests }

@@ -4,7 +4,7 @@ Tests for NeoSimplifiedDNSClient
 Class {
 	#name : #NeoSimplifiedDNSClientTests,
 	#superclass : #TestCase,
-	#category : #'Net-Protocols-DNS-Experimental'
+	#category : #'Neo-DNS-Tests'
 }
 
 { #category : #accessing }

@@ -11,7 +11,7 @@ NeoDNSTimeout
 Class {
 	#name : #NeoDNSTimeout,
 	#superclass : #DynamicVariable,
-	#category : #'Net-Protocols-DNS-Experimental'
+	#category : #'Neo-DNS-Core-Clients'
 }
 
 { #category : #accessing }

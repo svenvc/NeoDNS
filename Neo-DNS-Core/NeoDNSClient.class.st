@@ -28,7 +28,7 @@ Class {
 		'process',
 		'socket'
 	],
-	#category : #'Net-Protocols-DNS-Experimental'
+	#category : #'Neo-DNS-Core-Clients'
 }
 
 { #category : #'class initialization' }

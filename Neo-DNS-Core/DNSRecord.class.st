@@ -123,7 +123,7 @@ Class {
 		'ttl',
 		'timestamp'
 	],
-	#category : #'Net-Protocols-DNS-MessageFormat'
+	#category : #'Neo-DNS-Core-Messages'
 }
 
 { #category : #'instance creation' }
